@@ -1,0 +1,23 @@
+<template name="todosItem">
+  <div class="list-item {{checkedClass}} {{editingClass}}">
+    <label class="checkbox">
+      <input type="checkbox" checked="{{checked}}" name="checked">
+      <span class="checkbox-custom"></span>
+    </label>
+
+    <input type="text" class="task-name" value="{{text}}" placeholder="Task name">
+    <div class="col-sm-3">
+      <div class="input-daterange input-group" id="my-datepicker">
+        <input type="text" class="input-sm form-control" data-provide="datepicker" placeholder="from" name="start" id="startdate"/>
+        <span class="input-group-addon">
+          <span class="glyphicon glyphicon-calendar"></span>
+        </span>
+        <input type="text" class="input-sm form-control" data-provide="datepicker" placeholder="to" name="end" id="enddate"/>
+        <span class="input-group-addon">
+          <span class="glyphicon glyphicon-calendar"></span>
+        </span>
+      </div>
+    </div>
+    <a class="js-delete-item delete-item" href="#"><span class="icon-trash"></span></a>
+  </div>
+</template>
