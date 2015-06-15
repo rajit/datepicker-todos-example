@@ -1,22 +1,18 @@
 var EDITING_KEY = 'EDITING_TODO_ID';
 
-Template.todosItem.onRendered(function() {
-  $('#my-datepicker').datepicker({
-    format: 'DD, dd-mm-yyyy',
-    startView: 0,
-    todayBtn: "linked",
-    language: "pt-BR",
-    startDate: '0',
-    endDate: '+2y'
-  });
-});
-
 Template.todosItem.helpers({
   checkedClass: function() {
     return this.checked && 'checked';
   },
   editingClass: function() {
     return Session.equals(EDITING_KEY, this._id) && 'editing';
+  },
+  dateOptions: function() {
+    return {
+      multidate: true,
+      todayBtn: 'linked',
+      todayHighlight: true
+    }
   }
 });
 
