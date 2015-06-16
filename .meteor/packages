@@ -11,3 +11,4 @@ iron:router@0.9.4
 accounts-password
 nemo64:bootstrap
 rajit:bootstrap3-datepicker
+rajit:bootstrap3-datepicker-pt-br
