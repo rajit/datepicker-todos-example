@@ -1,13 +1,8 @@
 var EDITING_KEY = 'EDITING_TODO_ID';
 
 Template.todosItem.onRendered(function() {
-  $('#my-datepicker').datepicker({
-    format: 'DD, dd-mm-yyyy',
-    startView: 0,
-    todayBtn: "linked",
-    language: "pt-BR",
-    startDate: '0',
-    endDate: '+2y'
+  $('[name=datePick]').datepicker({
+    multidate: true
   });
 });
 
